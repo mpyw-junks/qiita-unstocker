@@ -1,0 +1,32 @@
+{
+  "name": "Qiita Unstocker",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Unstock/Unstock取消を一覧に表示するエクステンション",
+  "homepage_url": "https://github.com/mpyw/qiita-unstocker",
+  "permissions": [
+    "http://qiita.com/*",
+    "https://qiita.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://qiita.com/*",
+        "https://qiita.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "http://qiita.com/*",
+        "https://qiita.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
